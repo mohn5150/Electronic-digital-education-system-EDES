@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Control Panel</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="pdf">Upload PDF:</label>
+        <input type="file" id="pdf" name="pdf" accept=".pdf" required>
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+{% endblock %}

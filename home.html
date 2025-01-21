@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Uploaded PDFs</h2>
+    <ul>
+        {% for pdf in pdfs %}
+            <li>
+                <a href="{{ url_for('static', filename='uploads/pdfs/' + pdf.filename) }}" target="_blank">
+                    {{ pdf.filename }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
